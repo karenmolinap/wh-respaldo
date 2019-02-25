@@ -54,6 +54,7 @@ if(!$product){
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
+    <?php include_once('ine.php'); ?>
   </div>
 </div>
   <div class="row">
@@ -78,7 +79,7 @@ if(!$product){
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
-                    <select class="form-control" name="product-categorie">
+                    <select id="s1" class="form-control" name="product-categorie">
                     <option value="">Selecciona una categoría</option>
                    <?php  foreach ($all_categories as $cat): ?>
                      <option value="<?php echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif; ?> >
@@ -87,7 +88,7 @@ if(!$product){
                  </select>
                   </div>
                   <div class="col-md-6">
-                    <select class="form-control" name="product-photo">
+                    <select id="s2" class="form-control" name="product-photo">
                       <option value=""> Sin imagen</option>
                       <?php  foreach ($all_photo as $photo): ?>
                         <option value="<?php echo (int)$photo['id'];?>" <?php if($product['media_id'] === $photo['id']): echo "selected"; endif; ?> >
@@ -139,6 +140,7 @@ if(!$product){
               </div>
               <button type="submit" name="product" class="btn btn-danger">Actualizar</button>
           </form>
+	  <?php include_once('activarS2.php'); ?>
          </div>
         </div>
       </div>

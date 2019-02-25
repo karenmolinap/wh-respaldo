@@ -70,7 +70,8 @@ function suggetion() {
     $('#product_info input').change(function(e)  {
             var price = +$('input[name=price]').val() || 0;
             var qty   = +$('input[name=quantity]').val() || 0;
-            var total = qty * price ;
+            var iva   = price * 0.16;
+	    var total = qty * (price + iva);
                 $('input[name=total]').val(total.toFixed(2));
     });
   }

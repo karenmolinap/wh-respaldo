@@ -40,6 +40,7 @@
 <?php include_once('layouts/header.php'); ?>
   <?php echo display_msg($msg); ?>
   <div class="row">
+   <?php include_once('ine.php'); ?>
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
@@ -64,7 +65,7 @@
             </div>
             <div class="form-group">
               <label for="level">Rol de usuario</label>
-                <select class="form-control" name="level">
+                <select id="s1" class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
                 <?php endforeach;?>
@@ -77,7 +78,7 @@
         </div>
 
       </div>
-
+      <?php include_once('activarS2.php'); ?>
     </div>
   </div>
 

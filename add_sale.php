@@ -71,11 +71,12 @@
             <th> Producto </th>
             <th> Precio </th>
             <th> Cantidad </th>
-            <th> Total </th>
+            <th> Total (+16% IVA) </th>
             <th> Agregado</th>
             <th> Acciones</th>
            </thead>
              <tbody  id="product_info"> </tbody>
+	     <tbody  id="product_info"> </tbody>
          </table>
        </form>
       </div>

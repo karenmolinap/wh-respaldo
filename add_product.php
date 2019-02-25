@@ -51,6 +51,7 @@
   </div>
 </div>
   <div class="row">
+  <?php include_once "ine.php" ?>
   <div class="col-md-9">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -73,7 +74,7 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
-                    <select class="form-control" name="product-categorie">
+                    <select id="s1" class="form-control" name="product-categorie">
                       <option value="">Selecciona una categoría</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
@@ -82,7 +83,7 @@
                     </select>
                   </div>
                   <div class="col-md-6">
-                    <select class="form-control" name="product-photo">
+                    <select id="s2" class="form-control" name="product-photo">
                       <option value="">Selecciona una imagen</option>
                     <?php  foreach ($all_photo as $photo): ?>
                       <option value="<?php echo (int)$photo['id'] ?>">
@@ -129,6 +130,5 @@
         </div>
       </div>
     </div>
-  </div>
-
+  <?php include "activarS2.php" ?>
 <?php include_once('layouts/footer.php'); ?>

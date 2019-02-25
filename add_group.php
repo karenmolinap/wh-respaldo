@@ -48,6 +48,7 @@
        <h3>Agregar nuevo grupo de usurios</h3>
      </div>
      <?php echo display_msg($msg); ?>
+     <?php include_once('ine.php'); ?>
       <form method="post" action="add_group.php" class="clearfix">
         <div class="form-group">
               <label for="name" class="control-label">Nombre del grupo</label>
@@ -59,7 +60,7 @@
         </div>
         <div class="form-group">
           <label for="status">Estado</label>
-            <select class="form-control" name="status">
+            <select id="s1" class="form-control" name="status">
               <option value="1">Activo</option>
               <option value="0">Inactivo</option>
             </select>
@@ -68,6 +69,7 @@
                 <button type="submit" name="add" class="btn btn-info">Guardar</button>
         </div>
     </form>
+<?php include_once('activarS2.php'); ?>
 </div>
 
 <?php include_once('layouts/footer.php'); ?>

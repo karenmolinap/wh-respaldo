@@ -45,6 +45,7 @@
     <div class="text-center">
        <h3>Editar Grupo</h3>
      </div>
+     <?php include_once('ine.php'); ?>
      <?php echo display_msg($msg); ?>
       <form method="post" action="edit_group.php?id=<?php echo (int)$e_group['id'];?>" class="clearfix">
         <div class="form-group">
@@ -57,7 +58,7 @@
         </div>
         <div class="form-group">
           <label for="status">Estado</label>
-              <select class="form-control" name="status">
+              <select id="s1" class="form-control" name="status">
                 <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Activo </option>
                 <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Inactivo</option>
                 <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Inactivo</option>
@@ -67,6 +68,7 @@
                 <button type="submit" name="update" class="btn btn-info">Actualizar</button>
         </div>
     </form>
+<?php include_once('activarS2.php'); ?>
 </div>
 
 <?php include_once('layouts/footer.php'); ?>

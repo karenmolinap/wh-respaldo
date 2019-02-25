@@ -67,6 +67,7 @@ if(isset($_POST['update-pass'])) {
 <?php include_once('layouts/header.php'); ?>
  <div class="row">
    <div class="col-md-12"> <?php echo display_msg($msg); ?> </div>
+   <?php include_once('ine.php'); ?>
   <div class="col-md-6">
      <div class="panel panel-default">
        <div class="panel-heading">
@@ -87,7 +88,7 @@ if(isset($_POST['update-pass'])) {
             </div>
             <div class="form-group">
               <label for="level">Rol de usuario</label>
-                <select class="form-control" name="level">
+                <select id="s1" class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option <?php if($group['group_level'] === $e_user['user_level']) echo 'selected="selected"';?> value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
                 <?php endforeach;?>
@@ -95,7 +96,7 @@ if(isset($_POST['update-pass'])) {
             </div>
             <div class="form-group">
               <label for="status">Estado</label>
-                <select class="form-control" name="status">
+                <select id="s2" class="form-control" name="status">
                   <option <?php if($e_user['status'] === '1') echo 'selected="selected"';?>value="1">Activo</option>
                   <option <?php if($e_user['status'] === '0') echo 'selected="selected"';?> value="0">Inactivo</option>
                 </select>
@@ -126,6 +127,7 @@ if(isset($_POST['update-pass'])) {
                   <button type="submit" name="update-pass" class="btn btn-danger pull-right">Cambiar</button>
           </div>
         </form>
+      <?php include_once('activarS2.php'); ?>
       </div>
     </div>
   </div>
